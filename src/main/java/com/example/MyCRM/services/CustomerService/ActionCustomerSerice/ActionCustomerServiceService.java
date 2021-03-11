@@ -5,6 +5,7 @@ import com.example.MyCRM.models.CustomerService;
 
 import java.util.List;
 
+//for pull
 public interface ActionCustomerServiceService {
     List<CustomerService> createSell(String inputString);
     List<CustomerService> createCommunication(String inputString);

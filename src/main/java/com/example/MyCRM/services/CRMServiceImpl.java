@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+//for pull
 @Service
 public class CRMServiceImpl implements CRMService{
     private Customer customer;

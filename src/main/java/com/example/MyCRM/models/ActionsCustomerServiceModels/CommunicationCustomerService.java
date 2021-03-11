@@ -9,6 +9,7 @@ public class CommunicationCustomerService {
     private int customerServiceId;
     private List<SocialNetwork> network;
 
+    //for pull
     public CommunicationCustomerService(){}
 
     public CommunicationCustomerService(int customerId, int customerServiceId, List<SocialNetwork> network){

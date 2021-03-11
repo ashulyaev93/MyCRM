@@ -2,6 +2,7 @@ package com.example.MyCRM.models;
 
 import javax.persistence.*;
 
+//for pull
 @Entity
 @Table(name = "social_network")
 public class SocialNetwork {

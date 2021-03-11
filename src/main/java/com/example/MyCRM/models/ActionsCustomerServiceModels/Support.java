@@ -8,6 +8,7 @@ public class Support {
 
     public Support(){}
 
+    //for pull
     public Support(int customerId, int customerServiceId, String description, String status){
         this.customerId = customerId;
         this.customerServiceId = customerServiceId;

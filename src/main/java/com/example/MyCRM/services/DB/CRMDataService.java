@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+//for pull
 @Service
 public interface CRMDataService {
 //    void saveData();

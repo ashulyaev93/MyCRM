@@ -4,6 +4,7 @@ import com.example.MyCRM.models.SocialNetwork;
 
 import java.util.List;
 
+//for pull
 public class CommunicationCustomer {
     private int customerId;
     private int customerServiceId;

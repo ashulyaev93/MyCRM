@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+//for pull
 @Service
 public class CustomerServiceImpl implements CustomerService{
     private ActionCustomerServiceService sell;
