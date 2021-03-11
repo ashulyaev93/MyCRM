@@ -6,6 +6,7 @@ public class Sell {
     private int productId;
     private float price;
 
+    //for pull
     public Sell(){}
 
     public Sell(int customerId, int customerServiceId, int productId, float price){

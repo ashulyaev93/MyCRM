@@ -6,6 +6,7 @@ import com.example.MyCRM.models.ActionsCustomerModels.CommunicationCustomer;
 import javax.persistence.*;
 import java.util.List;
 
+//for pull
 @Entity
 @Table(name = "customer")
 public class Customer {

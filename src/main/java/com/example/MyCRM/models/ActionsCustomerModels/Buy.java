@@ -1,5 +1,6 @@
 package com.example.MyCRM.models.ActionsCustomerModels;
 
+//for pull
 public class Buy {
     private int customerId;
     private int productId;

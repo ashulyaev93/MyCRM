@@ -7,6 +7,7 @@ import com.example.MyCRM.models.ActionsCustomerServiceModels.Support;
 import javax.persistence.*;
 import java.util.List;
 
+//for pull
 @Entity
 @Table(name = "customer")
 public class CustomerService {
