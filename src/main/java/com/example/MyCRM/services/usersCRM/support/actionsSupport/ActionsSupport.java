@@ -1,4 +1,7 @@
 package com.example.MyCRM.services.usersCRM.support.actionsSupport;
 
-public interface ActionsSupport {
+import java.util.Map;
+
+public interface ActionsSupport<T> {
+    T support(Map<Integer,String>inputWorks);
 }

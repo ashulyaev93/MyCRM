@@ -1,31 +1,36 @@
 package com.example.MyCRM.models.managerActions;
 
 public class Sale {
-    private int customerId;
-    private int customerServiceId;
+    private int managerId;
+    private int clientId;
     private int productId;
+    private int amount;
     private float price;
 
-    //for pull
     public Sale(){}
 
-    public Sale(int customerId, int customerServiceId, int productId, float price){
-        this.customerId = customerId;
-        this.customerServiceId = customerServiceId;
+    public Sale(int managerId, int clientId, int productId, int amount, float price){
+        this.managerId = managerId;
+        this.clientId = clientId;
         this.productId = productId;
+        this.amount = amount;
         this.price = price;
     }
 
-    public int getCustomerId() {
-        return customerId;
+    public int getManagerId() {
+        return managerId;
     }
 
-    public int getCustomerServiceId(){
-        return customerServiceId;
+    public int getClientId(){
+        return clientId;
     }
 
     public int getProductId() {
         return productId;
+    }
+
+    public int getAmount() {
+        return amount;
     }
 
     public float getPrice() {
@@ -34,6 +39,6 @@ public class Sale {
 
     @Override
     public String toString(){
-        return "Sell: " + customerId + " " + customerServiceId + " " + productId + " " + price;
+        return "Sell: " + managerId + " " + clientId + " " + productId + " " + amount +  " " + price;
     }
 }

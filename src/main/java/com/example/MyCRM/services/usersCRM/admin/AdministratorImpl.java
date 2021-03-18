@@ -1,4 +1,5 @@
 package com.example.MyCRM.services.usersCRM.admin;
 
-public class AdministratorImpl {
+public class AdministratorImpl implements Administrator{
+
 }

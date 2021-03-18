@@ -1,4 +1,4 @@
 package com.example.MyCRM.services.usersCRM.support;
 
-public class SupportImpl {
+public class SupportImpl implements Support{
 }

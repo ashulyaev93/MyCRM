@@ -1,56 +1,34 @@
 package com.example.MyCRM.models.managerActions;
 
-
-import javax.persistence.*;
-
-@Entity
-@Table(name = "products")
-
 public class Product {
-    @Id
-//    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
-    private int id;
-
-    @Column(name = "name")
-    private String name;
-
-    @Column(name = "description")
-    private String description;
-
-    @Column(name = "price")
-    private double price;
+    private int productId;
+    private float price;
+    private String discription;
 
     public Product(){
 
     }
 
-    //for pull
-    public Product(int id, String name, String description, double price){
-        this.id = id;
-        this.name = name;
-        this.description = description;
+    public Product(int productId, float price, String discription){
+        this.productId = productId;
         this.price = price;
+        this.discription = discription;
     }
 
-    public int getId() {
-        return id;
+    public int getProductId() {
+        return productId;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public double getPrice() {
+    public float getPrice() {
         return price;
+    }
+
+    public String getDiscriptio() {
+        return discription;
     }
 
     @Override
     public String toString(){
-        return "Product: " + " " + name + " " + description + " " + price;
+        return "productId = " + productId + " price = " + price + " discription = " + discription;
     }
 }

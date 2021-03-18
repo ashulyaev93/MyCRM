@@ -1,4 +1,4 @@
 package com.example.MyCRM.services.usersCRM.manager.actionsManager;
 
-public class SaleImpl {
+public class SaleImpl implements ActionsManager{
 }

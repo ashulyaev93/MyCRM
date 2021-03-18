@@ -1,39 +1,78 @@
 package com.example.MyCRM.models;
 
+import com.example.MyCRM.models.managerActions.Documentation;
+import com.example.MyCRM.models.managerActions.Sale;
+import com.example.MyCRM.models.supportActions.EnginWorks;
+import com.example.MyCRM.models.supportActions.HelpUsers;
+
+import javax.persistence.*;
+import java.util.Map;
+import java.util.Set;
+
+@Entity
+@Table(name = "support")
 public class Support {
-    private int customerId;
-    private int customerServiceId;
-    private String description;
-    private String status;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
+    private int id;
 
-    public Support(){}
+    @Column(name = "first_name")
+    private String firstName;
 
-    //for pull
-    public Support(int customerId, int customerServiceId, String description, String status){
-        this.customerId = customerId;
-        this.customerServiceId = customerServiceId;
-        this.description = description;
-        this.status = status;
+    @Column(name = "last_name")
+    private String lastName;
+
+    @Column(name = "email")
+    private String email;
+
+    @Transient
+    private Map<Integer, EnginWorks> works;
+
+    @Transient
+    private Map<Integer, HelpUsers> helps;
+
+    public Support(){
+
     }
 
-    public int getCustomerId() {
-        return customerId;
+    public Support(String firstName, String lastName, String email, Map<Integer, EnginWorks> works, Map<Integer, HelpUsers> helps){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.works = works;
+        this.helps = helps;
     }
 
-    public int getCustomerServiceId(){
-        return customerServiceId;
+    public int getId() {
+        return id;
     }
 
-    public String getDescription() {
-        return description;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getstatus() {
-        return status;
+    public String getFirstName() {
+        return firstName;
     }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public Map<Integer, EnginWorks> getWorks() {
+        return works;
+    }
+
+    public Map<Integer, HelpUsers> getHelps(){return helps;}
+
 
     @Override
     public String toString(){
-        return "Support: " + customerId + " " + customerServiceId + " " + description + " " + status;
+        return firstName + " " + lastName + " " + email;
     }
 }

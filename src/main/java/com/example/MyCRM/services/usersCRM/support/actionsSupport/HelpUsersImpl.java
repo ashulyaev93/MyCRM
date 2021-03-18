@@ -1,4 +1,4 @@
 package com.example.MyCRM.services.usersCRM.support.actionsSupport;
 
-public class HelpUsersImpl {
+public class HelpUsersImpl implements ActionsSupport{
 }
