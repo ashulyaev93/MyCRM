@@ -1,4 +1,4 @@
-package com.example.MyCRM.models.ActionsCustomerServiceModels;
+package com.example.MyCRM.models;
 
 public class Support {
     private int customerId;

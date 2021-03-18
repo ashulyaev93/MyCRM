@@ -1,15 +1,15 @@
-package com.example.MyCRM.models.ActionsCustomerServiceModels;
+package com.example.MyCRM.models.managerActions;
 
-public class Sell {
+public class Sale {
     private int customerId;
     private int customerServiceId;
     private int productId;
     private float price;
 
     //for pull
-    public Sell(){}
+    public Sale(){}
 
-    public Sell(int customerId, int customerServiceId, int productId, float price){
+    public Sale(int customerId, int customerServiceId, int productId, float price){
         this.customerId = customerId;
         this.customerServiceId = customerServiceId;
         this.productId = productId;

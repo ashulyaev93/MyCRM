@@ -1,4 +1,4 @@
-package com.example.MyCRM.models;
+package com.example.MyCRM.models.managerActions;
 
 
 import javax.persistence.*;
