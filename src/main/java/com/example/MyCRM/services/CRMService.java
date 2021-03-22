@@ -6,5 +6,8 @@ import java.util.List;
 
 @Service
 public interface CRMService {
-
+    String performAnActionFromAdministrator();
+    String performAnActionFromManager();
+    String performAnActionFromSupport();
+    String showData();
 }

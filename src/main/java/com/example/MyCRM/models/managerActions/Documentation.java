@@ -2,31 +2,25 @@ package com.example.MyCRM.models.managerActions;
 
 public class Documentation {
     private int id;
-    private String nameNetwork;
-    private String message;
+    private String discription;
 
-    public SocialNetwork(){}
+    public Documentation(){}
 
-    public SocialNetwork(int id, String nameNetwork, String message){
+    public Documentation(int id, String discription){
         this.id = id;
-        this.nameNetwork = nameNetwork;
-        this.message = message;
+        this.discription = discription;
     }
 
     public int getId() {
         return id;
     }
 
-    public String getNameNetwork() {
-        return nameNetwork;
-    }
-
-    public String getMessage() {
-        return message;
+    public String getDiscription() {
+        return discription;
     }
 
     @Override
     public String toString(){
-        return "Network: " + " " + nameNetwork + " " + message;
+        return "Network: " + " " + discription;
     }
 }

@@ -1,32 +1,28 @@
 package com.example.MyCRM.models.adminActions;
 
+import java.util.Set;
+
 public class Communication {
     private int id;
-    private String nameNetwork;
-    private String message;
+    private Set<String> nameNetwork;
 
-    public SocialNetwork(){}
+    public Communication(){}
 
-    public SocialNetwork(int id, String nameNetwork, String message){
+    public Communication(int id, Set<String> nameNetwork){
         this.id = id;
         this.nameNetwork = nameNetwork;
-        this.message = message;
     }
 
     public int getId() {
         return id;
     }
 
-    public String getNameNetwork() {
+    public Set<String> getNameNetwork() {
         return nameNetwork;
-    }
-
-    public String getMessage() {
-        return message;
     }
 
     @Override
     public String toString(){
-        return "Network: " + " " + nameNetwork + " " + message;
+        return "Network: " + " " + nameNetwork;
     }
 }

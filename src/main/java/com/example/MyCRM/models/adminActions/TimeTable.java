@@ -1,32 +1,29 @@
 package com.example.MyCRM.models.adminActions;
 
+import java.util.Set;
+
 public class TimeTable {
     private int id;
-    private String nameNetwork;
-    private String message;
+    private Set<Workout> workouts;
+    private String date;
 
-    public SocialNetwork(){}
+    public TimeTable(){}
 
-    public SocialNetwork(int id, String nameNetwork, String message){
+    public TimeTable(int id, Set<Workout> workouts, String date){
         this.id = id;
-        this.nameNetwork = nameNetwork;
-        this.message = message;
+        this.workouts = workouts;
+        this.date = date;
     }
 
     public int getId() {
         return id;
     }
 
-    public String getNameNetwork() {
-        return nameNetwork;
+    public Set<Workout> getWorkouts() {
+        return workouts;
     }
 
-    public String getMessage() {
-        return message;
-    }
-
-    @Override
-    public String toString(){
-        return "Network: " + " " + nameNetwork + " " + message;
+    public String getDate() {
+        return date;
     }
 }
