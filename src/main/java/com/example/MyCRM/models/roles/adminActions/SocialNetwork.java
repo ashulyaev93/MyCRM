@@ -1,29 +1,12 @@
 package com.example.MyCRM.models.roles.adminActions;
 
+import lombok.Data;
+
+@Data
 public class SocialNetwork {
-    private int id;
-    private String nameNetwork;
-    private String message;
-
-    public SocialNetwork(){}
-
-    public SocialNetwork(int id, String nameNetwork, String message){
-        this.id = id;
-        this.nameNetwork = nameNetwork;
-        this.message = message;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getNameNetwork() {
-        return nameNetwork;
-    }
-
-    public String getMessage() {
-        return message;
-    }
+    private final int id;
+    private final String nameNetwork;
+    private final String message;
 
     @Override
     public String toString(){

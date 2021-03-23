@@ -5,22 +5,16 @@ import com.example.MyCRM.services.usersCRM.admin.worksAdmin.entity.CrossFitTrain
 import com.example.MyCRM.services.usersCRM.admin.worksAdmin.entity.EmailMessage;
 import com.example.MyCRM.services.usersCRM.admin.worksAdmin.entity.FacebookMessage;
 import com.example.MyCRM.services.usersCRM.admin.worksAdmin.entity.SMSMessage;
+import lombok.Data;
 import org.springframework.stereotype.Service;
 
+@Data
 @Service
 public class AdministratorImpl implements Administrator{
-    private CommunicationWorker worksWithMessageFirstMessanger;
-    private CommunicationWorker worksWithMessageSecondMessanger;
-    private CommunicationWorker worksWithMessageThirdMessanger;
-    private TimeTableWorker addWorkoutFirst;
-
-    public AdministratorImpl(){
-        this.worksWithMessageFirstMessanger = new SMSMessage();
-        this.worksWithMessageSecondMessanger = new EmailMessage();
-        this.worksWithMessageThirdMessanger = new FacebookMessage();
-        this.addWorkoutFirst = new CrossFitTrain();
-    }
-
+    private final CommunicationWorker worksWithMessageFirstMessanger;
+    private final CommunicationWorker worksWithMessageSecondMessanger;
+    private final CommunicationWorker worksWithMessageThirdMessanger;
+    private final TimeTableWorker addWorkoutFirst;
 
     @Override
     public String sendMessage(String client, String inputText, String messanger) {

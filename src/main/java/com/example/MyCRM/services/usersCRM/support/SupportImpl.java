@@ -2,20 +2,15 @@ package com.example.MyCRM.services.usersCRM.support;
 
 import com.example.MyCRM.services.usersCRM.support.worksSupport.EnginHelpUsersWorker;
 import com.example.MyCRM.services.usersCRM.support.worksSupport.EnginWorksWorker;
-import com.example.MyCRM.services.usersCRM.support.worksSupport.entity.AddClientContract;
-import com.example.MyCRM.services.usersCRM.support.worksSupport.entity.DownloadClientCard;
+import lombok.Data;
 import org.springframework.stereotype.Service;
 
+@Data
 @Service
 public class SupportImpl implements Support{
 
-    private EnginWorksWorker problemsWithCRM;
-    private EnginHelpUsersWorker answerQuestionForCRM;
-
-    public SupportImpl(){
-        this.problemsWithCRM = new DownloadClientCard();
-        this.answerQuestionForCRM = new AddClientContract();
-    }
+    private final EnginWorksWorker problemsWithCRM;
+    private final EnginHelpUsersWorker answerQuestionForCRM;
 
     @Override
     public String settingCRM(String addDiscription, String setting, String deleteError) {

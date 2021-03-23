@@ -5,21 +5,16 @@ import com.example.MyCRM.services.DB.CRMDataServiceImpl;
 import com.example.MyCRM.services.usersCRM.admin.AdministratorImpl;
 import com.example.MyCRM.services.usersCRM.manager.ManagerImpl;
 import com.example.MyCRM.services.usersCRM.support.SupportImpl;
+import lombok.Data;
 import org.springframework.stereotype.Service;
 
+@Data
 @Service
 public class CRMServiceImpl implements CRMService{//TODO
-    private CRMService administrator;
-    private CRMService support;
-    private CRMService manager;
-    private CRMDataService data;
-
-    public CRMServiceImpl(){
-        this.administrator = (CRMService) new AdministratorImpl();
-        this.support = (CRMService) new SupportImpl();
-        this.manager = (CRMService) new ManagerImpl();
-        this.data = new CRMDataServiceImpl();
-    }
+    private final CRMService administrator;
+    private final CRMService support;
+    private final CRMService manager;
+    private final CRMDataService data;
 
     @Override
     public String performAnActionFromAdministrator() {

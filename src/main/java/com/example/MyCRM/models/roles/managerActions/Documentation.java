@@ -1,23 +1,11 @@
 package com.example.MyCRM.models.roles.managerActions;
 
+import lombok.Data;
+
+@Data
 public class Documentation {
-    private int id;
-    private String discription;
-
-    public Documentation(){}
-
-    public Documentation(int id, String discription){
-        this.id = id;
-        this.discription = discription;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getDiscription() {
-        return discription;
-    }
+    private final int id;
+    private final String discription;
 
     @Override
     public String toString(){

@@ -1,37 +1,13 @@
 package com.example.MyCRM.models.roles.supportActions;
 
+import lombok.Data;
+
+@Data
 public class HelpUsers {
-    private int helpId;
-    private int supportId;
-    private int clientId;
-    private String discription;
-
-    public HelpUsers(){
-
-    }
-
-    public HelpUsers(int helpId, int supportId, int clientId, String discription){
-        this.helpId = helpId;
-        this.supportId = supportId;
-        this.clientId = clientId;
-        this.discription = discription;
-    }
-
-    public int getHelpId() {
-        return helpId;
-    }
-
-    public int getSupportId() {
-        return supportId;
-    }
-
-    public int getClientId() {
-        return clientId;
-    }
-
-    public String getDiscription() {
-        return discription;
-    }
+    private final int helpId;
+    private final int supportId;
+    private final int clientId;
+    private final String discription;
 
     @Override
     public String toString(){

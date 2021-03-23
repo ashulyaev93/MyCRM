@@ -4,17 +4,14 @@ import com.example.MyCRM.services.usersCRM.manager.worksManager.DocumentationWor
 import com.example.MyCRM.services.usersCRM.manager.worksManager.SaleWorker;
 import com.example.MyCRM.services.usersCRM.manager.worksManager.entity.AddDocument;
 import com.example.MyCRM.services.usersCRM.manager.worksManager.entity.SaleCard;
+import lombok.Data;
 import org.springframework.stereotype.Service;
 
+@Data
 @Service
 public class ManagerImpl implements Manager {
-    private SaleWorker makeNewSale;
-    private DocumentationWorker createNewDocument;
-
-    public ManagerImpl(){
-        this.makeNewSale = new SaleCard();
-        this.createNewDocument = new AddDocument();
-    }
+    private final SaleWorker makeNewSale;
+    private final DocumentationWorker createNewDocument;
 
     @Override
     public String addDocumentation(String writeText, String saveDoc, String editDoc) {

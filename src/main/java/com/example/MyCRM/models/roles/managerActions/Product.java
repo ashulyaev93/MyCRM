@@ -1,31 +1,12 @@
 package com.example.MyCRM.models.roles.managerActions;
 
+import lombok.Data;
+
+@Data
 public class Product {
-    private int productId;
-    private float price;
-    private String discription;
-
-    public Product(){
-
-    }
-
-    public Product(int productId, float price, String discription){
-        this.productId = productId;
-        this.price = price;
-        this.discription = discription;
-    }
-
-    public int getProductId() {
-        return productId;
-    }
-
-    public float getPrice() {
-        return price;
-    }
-
-    public String getDiscriptio() {
-        return discription;
-    }
+    private final int productId;
+    private final float price;
+    private final String discription;
 
     @Override
     public String toString(){

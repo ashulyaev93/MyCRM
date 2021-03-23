@@ -1,37 +1,13 @@
 package com.example.MyCRM.models.roles.supportActions;
 
+import lombok.Data;
+
+@Data
 public class EnginWorks {
-    private int worksId;
-    private int supportId;
-    private int clientId;
-    private String discription;
-
-    public EnginWorks(){
-
-    }
-
-    public EnginWorks(int worksId, int supportId, int clientId, String discription){
-        this.worksId = worksId;
-        this.supportId = supportId;
-        this.clientId = clientId;
-        this.discription = discription;
-    }
-
-    public int getWorksId() {
-        return worksId;
-    }
-
-    public int getSupportId() {
-        return supportId;
-    }
-
-    public int getClientId() {
-        return clientId;
-    }
-
-    public String getDiscription() {
-        return discription;
-    }
+    private final int worksId;
+    private final int supportId;
+    private final int clientId;
+    private final String discription;
 
     @Override
     public String toString(){
