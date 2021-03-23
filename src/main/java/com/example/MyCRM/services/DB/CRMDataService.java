@@ -1,14 +1,16 @@
 package com.example.MyCRM.services.DB;
 
-import com.example.MyCRM.services.Customer.Customer;
+import com.example.MyCRM.models.roles.Administrator;
+import com.example.MyCRM.models.roles.Manager;
+import com.example.MyCRM.models.roles.Support;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-//for pull
 @Service
 public interface CRMDataService {
-//    void saveData();
-//    List<Customer> showLogByData(String fromDate, String toDate);
-//    List<Customer> showLogByExpression(String expression);
+    void saveLogData(String data);
+    List<Administrator> showLogByDataAdmin(String fromDate, String toDate);
+    List<Manager> showLogByDataManager(String fromDate, String toDate);
+    List<Support> showLogByDataSupport(String fromDate, String toDate);
 }
