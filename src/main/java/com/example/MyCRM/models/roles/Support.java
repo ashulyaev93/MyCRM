@@ -1,15 +1,14 @@
-package com.example.MyCRM.models;
+package com.example.MyCRM.models.roles;
 
-import com.example.MyCRM.models.adminActions.Communication;
-import com.example.MyCRM.models.adminActions.TimeTable;
+import com.example.MyCRM.models.roles.supportActions.EnginWorks;
+import com.example.MyCRM.models.roles.supportActions.HelpUsers;
 
 import javax.persistence.*;
-import java.util.Date;
 import java.util.Map;
 
 @Entity
-@Table(name = "administrator")
-public class Administrator {
+@Table(name = "support")
+public class Support {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
@@ -25,21 +24,21 @@ public class Administrator {
     private String email;
 
     @Transient
-    private Map<Integer, Communication> communication;
+    private Map<Integer, EnginWorks> works;
 
     @Transient
-    private Map<Date, TimeTable> timeTable;
+    private Map<Integer, HelpUsers> helps;
 
-    public Administrator(){
+    public Support(){
 
     }
 
-    public Administrator(String firstName, String lastName, String email, Map<Integer, Communication> communication, Map<Date, TimeTable> timeTable){
+    public Support(String firstName, String lastName, String email, Map<Integer, EnginWorks> works, Map<Integer, HelpUsers> helps){
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.communication = communication;
-        this.timeTable = timeTable;
+        this.works = works;
+        this.helps = helps;
     }
 
     public int getId() {
@@ -62,11 +61,11 @@ public class Administrator {
         return email;
     }
 
-    public Map<Integer,Communication> getCommunication() {
-        return communication;
+    public Map<Integer, EnginWorks> getWorks() {
+        return works;
     }
 
-    public Map<Date, TimeTable> getTimeTable(){return timeTable;}
+    public Map<Integer, HelpUsers> getHelps(){return helps;}
 
 
     @Override

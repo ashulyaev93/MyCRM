@@ -1,6 +1,5 @@
 package com.example.MyCRM.services.usersCRM.manager;
 
-import com.example.MyCRM.models.managerActions.Sale;
 import com.example.MyCRM.services.usersCRM.manager.worksManager.DocumentationWorker;
 import com.example.MyCRM.services.usersCRM.manager.worksManager.SaleWorker;
 import com.example.MyCRM.services.usersCRM.manager.worksManager.entity.AddDocument;

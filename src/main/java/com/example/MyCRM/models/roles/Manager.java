@@ -1,12 +1,9 @@
-package com.example.MyCRM.models;
+package com.example.MyCRM.models.roles;
 
-import com.example.MyCRM.models.adminActions.Communication;
-import com.example.MyCRM.models.adminActions.TimeTable;
-import com.example.MyCRM.models.managerActions.Documentation;
-import com.example.MyCRM.models.managerActions.Sale;
+import com.example.MyCRM.models.roles.managerActions.Documentation;
+import com.example.MyCRM.models.roles.managerActions.Sale;
 
 import javax.persistence.*;
-import java.util.Date;
 import java.util.Map;
 import java.util.Set;
 

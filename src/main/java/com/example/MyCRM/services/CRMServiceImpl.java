@@ -40,8 +40,7 @@ public class CRMServiceImpl implements CRMService{//TODO
     }
 
     @Override
-    public String showData() {
-        String dataLog = data.showData();
-        return dataLog;
+    public void saveLogData() {
+        System.out.println("Данные сохранены");
     }
 }

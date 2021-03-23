@@ -1,17 +1,15 @@
-package com.example.MyCRM.models;
+package com.example.MyCRM.models.roles;
 
-import com.example.MyCRM.models.managerActions.Documentation;
-import com.example.MyCRM.models.managerActions.Sale;
-import com.example.MyCRM.models.supportActions.EnginWorks;
-import com.example.MyCRM.models.supportActions.HelpUsers;
+import com.example.MyCRM.models.roles.adminActions.Communication;
+import com.example.MyCRM.models.roles.adminActions.TimeTable;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.Map;
-import java.util.Set;
 
 @Entity
-@Table(name = "support")
-public class Support {
+@Table(name = "administrator")
+public class Administrator {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
@@ -27,21 +25,21 @@ public class Support {
     private String email;
 
     @Transient
-    private Map<Integer, EnginWorks> works;
+    private Map<Integer, Communication> communication;
 
     @Transient
-    private Map<Integer, HelpUsers> helps;
+    private Map<Date, TimeTable> timeTable;
 
-    public Support(){
+    public Administrator(){
 
     }
 
-    public Support(String firstName, String lastName, String email, Map<Integer, EnginWorks> works, Map<Integer, HelpUsers> helps){
+    public Administrator(String firstName, String lastName, String email, Map<Integer, Communication> communication, Map<Date, TimeTable> timeTable){
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.works = works;
-        this.helps = helps;
+        this.communication = communication;
+        this.timeTable = timeTable;
     }
 
     public int getId() {
@@ -64,11 +62,11 @@ public class Support {
         return email;
     }
 
-    public Map<Integer, EnginWorks> getWorks() {
-        return works;
+    public Map<Integer,Communication> getCommunication() {
+        return communication;
     }
 
-    public Map<Integer, HelpUsers> getHelps(){return helps;}
+    public Map<Date, TimeTable> getTimeTable(){return timeTable;}
 
 
     @Override

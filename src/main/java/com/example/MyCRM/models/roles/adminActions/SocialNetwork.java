@@ -1,6 +1,4 @@
-package com.example.MyCRM.models.adminActions;
-
-import javax.persistence.*;
+package com.example.MyCRM.models.roles.adminActions;
 
 public class SocialNetwork {
     private int id;

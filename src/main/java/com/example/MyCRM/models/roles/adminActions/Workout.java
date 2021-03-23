@@ -1,4 +1,4 @@
-package com.example.MyCRM.models.adminActions;
+package com.example.MyCRM.models.roles.adminActions;
 
 public class Workout {
     private int id;

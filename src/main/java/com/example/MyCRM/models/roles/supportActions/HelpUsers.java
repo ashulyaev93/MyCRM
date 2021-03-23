@@ -1,4 +1,4 @@
-package com.example.MyCRM.models.supportActions;
+package com.example.MyCRM.models.roles.supportActions;
 
 public class HelpUsers {
     private int helpId;

@@ -1,4 +1,4 @@
-package com.example.MyCRM.models.managerActions;
+package com.example.MyCRM.models.roles.managerActions;
 
 public class Product {
     private int productId;

@@ -9,5 +9,5 @@ public interface CRMService {
     String performAnActionFromAdministrator();
     String performAnActionFromManager();
     String performAnActionFromSupport();
-    String showData();
+    void saveLogData();
 }
